@@ -1,3 +1,25 @@
+// One pass
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+        
+        for(int n : arr) {
+            if(n > first) {
+                second = first;
+                first = n;
+            } else if (n != first && n > second) {
+                second = n;
+            }
+        }
+        
+        if(second == Integer.MIN_VALUE) return -1;
+        
+        return second;
+    }
+}
+
+// Two pass
 class Solution {
     public int getSecondLargest(int[] arr) {
         int maxEle = getMax(arr);
