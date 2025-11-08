@@ -1,3 +1,4 @@
+// Approach: Prefix Sum + HashMap — stores first occurrence of each prefix sum to find longest 0-sum subarray
 class Solution {
     int maxLength(int arr[]) {
         HashMap<Integer, Integer> map = new HashMap<>();
